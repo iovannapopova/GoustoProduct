@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		579FF53C2374633B00E567CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579FF53B2374633B00E567CF /* AppDelegate.swift */; };
-		579FF53E2374633B00E567CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579FF53D2374633B00E567CF /* SceneDelegate.swift */; };
 		579FF5402374633B00E567CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579FF53F2374633B00E567CF /* ViewController.swift */; };
 		579FF5452374633D00E567CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 579FF5442374633D00E567CF /* Assets.xcassets */; };
 		579FF5482374633D00E567CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 579FF5462374633D00E567CF /* LaunchScreen.storyboard */; };
@@ -28,7 +27,6 @@
 		579FF57E23746E0200E567CF /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579FF57D23746E0200E567CF /* Controller.swift */; };
 		579FF58023746E1000E567CF /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579FF57F23746E1000E567CF /* Router.swift */; };
 		579FF58323755DE100E567CF /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579FF58223755DE100E567CF /* Resource.swift */; };
-		579FF589237597B300E567CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 579FF588237597B300E567CF /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +42,6 @@
 /* Begin PBXFileReference section */
 		579FF5382374633B00E567CF /* GoustoProducts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoustoProducts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		579FF53B2374633B00E567CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		579FF53D2374633B00E567CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		579FF53F2374633B00E567CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		579FF5442374633D00E567CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		579FF5472374633D00E567CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -67,7 +64,6 @@
 		579FF57D23746E0200E567CF /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		579FF57F23746E1000E567CF /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		579FF58223755DE100E567CF /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
-		579FF588237597B300E567CF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,14 +106,12 @@
 			isa = PBXGroup;
 			children = (
 				579FF53B2374633B00E567CF /* AppDelegate.swift */,
-				579FF53D2374633B00E567CF /* SceneDelegate.swift */,
 				579FF58123746E1400E567CF /* Router */,
 				579FF57823746A3F00E567CF /* Model */,
 				579FF575237467AE00E567CF /* ServiceLayer */,
 				579FF5612374640700E567CF /* PresentationLayer */,
 				579FF5442374633D00E567CF /* Assets.xcassets */,
 				579FF5462374633D00E567CF /* LaunchScreen.storyboard */,
-				579FF588237597B300E567CF /* Main.storyboard */,
 				579FF5492374633D00E567CF /* Info.plist */,
 			);
 			path = GoustoProducts;
@@ -289,7 +283,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				579FF589237597B300E567CF /* Main.storyboard in Resources */,
 				579FF5482374633D00E567CF /* LaunchScreen.storyboard in Resources */,
 				579FF5452374633D00E567CF /* Assets.xcassets in Resources */,
 			);
@@ -322,7 +315,6 @@
 				579FF56B237464A700E567CF /* ProductDetailViewController.swift in Sources */,
 				579FF58023746E1000E567CF /* Router.swift in Sources */,
 				579FF53C2374633B00E567CF /* AppDelegate.swift in Sources */,
-				579FF53E2374633B00E567CF /* SceneDelegate.swift in Sources */,
 				579FF57C23746DDC00E567CF /* PlistDataStore.swift in Sources */,
 				579FF56D237464BD00E567CF /* ProductDetailViewModel.swift in Sources */,
 				579FF577237469F200E567CF /* Product.swift in Sources */,

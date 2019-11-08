@@ -29,8 +29,7 @@ final class Controller {
     }
 
     fileprivate func updateProductsUI() {
-        let array = products.map {  CellViewModel(title: $0.title, detail: "") }
-        
+        productsUI.cellViewModels = products.map {  CellViewModel(title: $0.title, detail: "") }
     }
 }
 
