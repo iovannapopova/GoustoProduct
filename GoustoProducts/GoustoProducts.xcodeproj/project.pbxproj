@@ -1,0 +1,590 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		579FF53C2374633B00E567CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579FF53B2374633B00E567CF /* AppDelegate.swift */; };
+		579FF53E2374633B00E567CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579FF53D2374633B00E567CF /* SceneDelegate.swift */; };
+		579FF5402374633B00E567CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579FF53F2374633B00E567CF /* ViewController.swift */; };
+		579FF5452374633D00E567CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 579FF5442374633D00E567CF /* Assets.xcassets */; };
+		579FF5482374633D00E567CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 579FF5462374633D00E567CF /* LaunchScreen.storyboard */; };
+		579FF5532374633D00E567CF /* GoustoProductsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579FF5522374633D00E567CF /* GoustoProductsTests.swift */; };
+		579FF55E237463EA00E567CF /* TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579FF55D237463EA00E567CF /* TableViewDelegate.swift */; };
+		579FF5602374640000E567CF /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579FF55F2374640000E567CF /* TableViewDataSource.swift */; };
+		579FF5632374641D00E567CF /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579FF5622374641D00E567CF /* TableViewCell.swift */; };
+		579FF5662374644B00E567CF /* CellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579FF5652374644B00E567CF /* CellViewModel.swift */; };
+		579FF56B237464A700E567CF /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579FF56A237464A700E567CF /* ProductDetailViewController.swift */; };
+		579FF56D237464BD00E567CF /* ProductDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579FF56C237464BD00E567CF /* ProductDetailViewModel.swift */; };
+		579FF5702374677000E567CF /* ProductResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579FF56F2374677000E567CF /* ProductResource.swift */; };
+		579FF5722374678700E567CF /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579FF5712374678700E567CF /* WebService.swift */; };
+		579FF574237467A400E567CF /* NetwotkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579FF573237467A400E567CF /* NetwotkClient.swift */; };
+		579FF577237469F200E567CF /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579FF576237469F200E567CF /* Product.swift */; };
+		579FF57A23746DC100E567CF /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579FF57923746DC100E567CF /* DataStore.swift */; };
+		579FF57C23746DDC00E567CF /* PlistDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579FF57B23746DDC00E567CF /* PlistDataStore.swift */; };
+		579FF57E23746E0200E567CF /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579FF57D23746E0200E567CF /* Controller.swift */; };
+		579FF58023746E1000E567CF /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579FF57F23746E1000E567CF /* Router.swift */; };
+		579FF58323755DE100E567CF /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579FF58223755DE100E567CF /* Resource.swift */; };
+		579FF589237597B300E567CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 579FF588237597B300E567CF /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		579FF54F2374633D00E567CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 579FF5302374633A00E567CF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 579FF5372374633A00E567CF;
+			remoteInfo = GoustoProducts;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		579FF5382374633B00E567CF /* GoustoProducts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoustoProducts.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		579FF53B2374633B00E567CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		579FF53D2374633B00E567CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		579FF53F2374633B00E567CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		579FF5442374633D00E567CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		579FF5472374633D00E567CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		579FF5492374633D00E567CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		579FF54E2374633D00E567CF /* GoustoProductsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoustoProductsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		579FF5522374633D00E567CF /* GoustoProductsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoustoProductsTests.swift; sourceTree = "<group>"; };
+		579FF5542374633D00E567CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		579FF55D237463EA00E567CF /* TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDelegate.swift; sourceTree = "<group>"; };
+		579FF55F2374640000E567CF /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
+		579FF5622374641D00E567CF /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		579FF5652374644B00E567CF /* CellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModel.swift; sourceTree = "<group>"; };
+		579FF56A237464A700E567CF /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
+		579FF56C237464BD00E567CF /* ProductDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewModel.swift; sourceTree = "<group>"; };
+		579FF56F2374677000E567CF /* ProductResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductResource.swift; sourceTree = "<group>"; };
+		579FF5712374678700E567CF /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		579FF573237467A400E567CF /* NetwotkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetwotkClient.swift; sourceTree = "<group>"; };
+		579FF576237469F200E567CF /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		579FF57923746DC100E567CF /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		579FF57B23746DDC00E567CF /* PlistDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlistDataStore.swift; sourceTree = "<group>"; };
+		579FF57D23746E0200E567CF /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
+		579FF57F23746E1000E567CF /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		579FF58223755DE100E567CF /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		579FF588237597B300E567CF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		579FF5352374633A00E567CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		579FF54B2374633D00E567CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		579FF52F2374633A00E567CF = {
+			isa = PBXGroup;
+			children = (
+				579FF53A2374633B00E567CF /* GoustoProducts */,
+				579FF5512374633D00E567CF /* GoustoProductsTests */,
+				579FF5392374633B00E567CF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		579FF5392374633B00E567CF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				579FF5382374633B00E567CF /* GoustoProducts.app */,
+				579FF54E2374633D00E567CF /* GoustoProductsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		579FF53A2374633B00E567CF /* GoustoProducts */ = {
+			isa = PBXGroup;
+			children = (
+				579FF53B2374633B00E567CF /* AppDelegate.swift */,
+				579FF53D2374633B00E567CF /* SceneDelegate.swift */,
+				579FF58123746E1400E567CF /* Router */,
+				579FF57823746A3F00E567CF /* Model */,
+				579FF575237467AE00E567CF /* ServiceLayer */,
+				579FF5612374640700E567CF /* PresentationLayer */,
+				579FF5442374633D00E567CF /* Assets.xcassets */,
+				579FF5462374633D00E567CF /* LaunchScreen.storyboard */,
+				579FF588237597B300E567CF /* Main.storyboard */,
+				579FF5492374633D00E567CF /* Info.plist */,
+			);
+			path = GoustoProducts;
+			sourceTree = "<group>";
+		};
+		579FF5512374633D00E567CF /* GoustoProductsTests */ = {
+			isa = PBXGroup;
+			children = (
+				579FF5522374633D00E567CF /* GoustoProductsTests.swift */,
+				579FF5542374633D00E567CF /* Info.plist */,
+			);
+			path = GoustoProductsTests;
+			sourceTree = "<group>";
+		};
+		579FF5612374640700E567CF /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				579FF5692374648700E567CF /* ProductsList */,
+				579FF56E237464C400E567CF /* ProductDetail */,
+			);
+			path = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		579FF5642374642600E567CF /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				579FF5622374641D00E567CF /* TableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		579FF5672374645100E567CF /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				579FF5652374644B00E567CF /* CellViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		579FF5692374648700E567CF /* ProductsList */ = {
+			isa = PBXGroup;
+			children = (
+				579FF53F2374633B00E567CF /* ViewController.swift */,
+				579FF55D237463EA00E567CF /* TableViewDelegate.swift */,
+				579FF55F2374640000E567CF /* TableViewDataSource.swift */,
+				579FF5642374642600E567CF /* Cells */,
+				579FF5672374645100E567CF /* ViewModels */,
+			);
+			path = ProductsList;
+			sourceTree = "<group>";
+		};
+		579FF56E237464C400E567CF /* ProductDetail */ = {
+			isa = PBXGroup;
+			children = (
+				579FF56A237464A700E567CF /* ProductDetailViewController.swift */,
+				579FF56C237464BD00E567CF /* ProductDetailViewModel.swift */,
+			);
+			path = ProductDetail;
+			sourceTree = "<group>";
+		};
+		579FF575237467AE00E567CF /* ServiceLayer */ = {
+			isa = PBXGroup;
+			children = (
+				579FF56F2374677000E567CF /* ProductResource.swift */,
+				579FF58223755DE100E567CF /* Resource.swift */,
+				579FF57B23746DDC00E567CF /* PlistDataStore.swift */,
+				579FF57923746DC100E567CF /* DataStore.swift */,
+				579FF5712374678700E567CF /* WebService.swift */,
+				579FF573237467A400E567CF /* NetwotkClient.swift */,
+				579FF57D23746E0200E567CF /* Controller.swift */,
+			);
+			path = ServiceLayer;
+			sourceTree = "<group>";
+		};
+		579FF57823746A3F00E567CF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				579FF576237469F200E567CF /* Product.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		579FF58123746E1400E567CF /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				579FF57F23746E1000E567CF /* Router.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		579FF5372374633A00E567CF /* GoustoProducts */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 579FF5572374633D00E567CF /* Build configuration list for PBXNativeTarget "GoustoProducts" */;
+			buildPhases = (
+				579FF5342374633A00E567CF /* Sources */,
+				579FF5352374633A00E567CF /* Frameworks */,
+				579FF5362374633A00E567CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GoustoProducts;
+			productName = GoustoProducts;
+			productReference = 579FF5382374633B00E567CF /* GoustoProducts.app */;
+			productType = "com.apple.product-type.application";
+		};
+		579FF54D2374633D00E567CF /* GoustoProductsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 579FF55A2374633D00E567CF /* Build configuration list for PBXNativeTarget "GoustoProductsTests" */;
+			buildPhases = (
+				579FF54A2374633D00E567CF /* Sources */,
+				579FF54B2374633D00E567CF /* Frameworks */,
+				579FF54C2374633D00E567CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				579FF5502374633D00E567CF /* PBXTargetDependency */,
+			);
+			name = GoustoProductsTests;
+			productName = GoustoProductsTests;
+			productReference = 579FF54E2374633D00E567CF /* GoustoProductsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		579FF5302374633A00E567CF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = "Iovanna Mishanina";
+				TargetAttributes = {
+					579FF5372374633A00E567CF = {
+						CreatedOnToolsVersion = 11.1;
+					};
+					579FF54D2374633D00E567CF = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = 579FF5372374633A00E567CF;
+					};
+				};
+			};
+			buildConfigurationList = 579FF5332374633A00E567CF /* Build configuration list for PBXProject "GoustoProducts" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 579FF52F2374633A00E567CF;
+			productRefGroup = 579FF5392374633B00E567CF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				579FF5372374633A00E567CF /* GoustoProducts */,
+				579FF54D2374633D00E567CF /* GoustoProductsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		579FF5362374633A00E567CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				579FF589237597B300E567CF /* Main.storyboard in Resources */,
+				579FF5482374633D00E567CF /* LaunchScreen.storyboard in Resources */,
+				579FF5452374633D00E567CF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		579FF54C2374633D00E567CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		579FF5342374633A00E567CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				579FF5722374678700E567CF /* WebService.swift in Sources */,
+				579FF574237467A400E567CF /* NetwotkClient.swift in Sources */,
+				579FF55E237463EA00E567CF /* TableViewDelegate.swift in Sources */,
+				579FF5602374640000E567CF /* TableViewDataSource.swift in Sources */,
+				579FF5402374633B00E567CF /* ViewController.swift in Sources */,
+				579FF5662374644B00E567CF /* CellViewModel.swift in Sources */,
+				579FF5632374641D00E567CF /* TableViewCell.swift in Sources */,
+				579FF57A23746DC100E567CF /* DataStore.swift in Sources */,
+				579FF5702374677000E567CF /* ProductResource.swift in Sources */,
+				579FF58323755DE100E567CF /* Resource.swift in Sources */,
+				579FF56B237464A700E567CF /* ProductDetailViewController.swift in Sources */,
+				579FF58023746E1000E567CF /* Router.swift in Sources */,
+				579FF53C2374633B00E567CF /* AppDelegate.swift in Sources */,
+				579FF53E2374633B00E567CF /* SceneDelegate.swift in Sources */,
+				579FF57C23746DDC00E567CF /* PlistDataStore.swift in Sources */,
+				579FF56D237464BD00E567CF /* ProductDetailViewModel.swift in Sources */,
+				579FF577237469F200E567CF /* Product.swift in Sources */,
+				579FF57E23746E0200E567CF /* Controller.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		579FF54A2374633D00E567CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				579FF5532374633D00E567CF /* GoustoProductsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		579FF5502374633D00E567CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 579FF5372374633A00E567CF /* GoustoProducts */;
+			targetProxy = 579FF54F2374633D00E567CF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		579FF5462374633D00E567CF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				579FF5472374633D00E567CF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		579FF5552374633D00E567CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		579FF5562374633D00E567CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		579FF5582374633D00E567CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FATB7T58LC;
+				INFOPLIST_FILE = GoustoProducts/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.iovanna.GoustoProducts;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		579FF5592374633D00E567CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FATB7T58LC;
+				INFOPLIST_FILE = GoustoProducts/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.iovanna.GoustoProducts;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		579FF55B2374633D00E567CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FATB7T58LC;
+				INFOPLIST_FILE = GoustoProductsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.iovanna.GoustoProductsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoustoProducts.app/GoustoProducts";
+			};
+			name = Debug;
+		};
+		579FF55C2374633D00E567CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FATB7T58LC;
+				INFOPLIST_FILE = GoustoProductsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.iovanna.GoustoProductsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoustoProducts.app/GoustoProducts";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		579FF5332374633A00E567CF /* Build configuration list for PBXProject "GoustoProducts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				579FF5552374633D00E567CF /* Debug */,
+				579FF5562374633D00E567CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		579FF5572374633D00E567CF /* Build configuration list for PBXNativeTarget "GoustoProducts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				579FF5582374633D00E567CF /* Debug */,
+				579FF5592374633D00E567CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		579FF55A2374633D00E567CF /* Build configuration list for PBXNativeTarget "GoustoProductsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				579FF55B2374633D00E567CF /* Debug */,
+				579FF55C2374633D00E567CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 579FF5302374633A00E567CF /* Project object */;
+}
