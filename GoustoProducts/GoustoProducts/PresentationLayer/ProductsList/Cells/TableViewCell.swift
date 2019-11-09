@@ -29,5 +29,24 @@ class TableViewCell: UITableViewCell {
 
     func update() {
         textLabel?.text = viewModel.title
+        detailTextLabel?.text = viewModel.price
+        imageView?.image = nil
+        guard let imageURL = viewModel.imageURL else {
+            return
+        }
+        let task = URLSession.shared.dataTask(with: imageURL) { (responseData, response, _) in
+            guard let data = responseData else {
+                return
+            }
+            DispatchQueue.main.async {
+                guard response?.url == self.viewModel.imageURL else {
+                    return
+                }
+                self.imageView?.image = UIImage(data: data, scale: UIScreen.main.scale)
+                self.setNeedsLayout()
+
+            }
+        }
+        task.resume()
     }
 }

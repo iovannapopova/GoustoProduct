@@ -12,6 +12,10 @@ protocol UI: class {
     var cellViewModels: [CellViewModel] { get set }
 }
 
+protocol TableSelection: class {
+    func onRowSelected(at indexPath: IndexPath)
+}
+
 protocol UIDelegate: class {
     func uiDidAppear()
 }
@@ -29,7 +33,17 @@ final class Controller {
     }
 
     fileprivate func updateProductsUI() {
-        productsUI.cellViewModels = products.map {  CellViewModel(title: $0.title, detail: "") }
+        productsUI.cellViewModels = products.map { product in
+            let images = product.images
+            var url: URL?
+            if let imageSources = images["750"] as? ImageSources {
+                url = URL(string: imageSources.url)!
+            }
+            return CellViewModel(title: product.title,
+                          price: product.listPrice,
+                          imageURL: url)
+
+        }
     }
 }
 
@@ -42,5 +56,21 @@ extension Controller: UIDelegate {
 extension Controller: DataStoreObserver {
     func productsDidUpdate(products: [Product]) {
         updateProductsUI()
+    }
+}
+
+extension Controller: TableSelection {
+    func onRowSelected(at indexPath: IndexPath) {
+        let product = products[indexPath.row]
+        let images = product.images
+        var url: URL?
+        if let imageSources = images["750"] as? ImageSources {
+            url = URL(string: imageSources.url)!
+        }
+        let vm = ProductDetailViewModel(title: product.title,
+                                        description: product.title,
+                                        price: "Price: ",// + product.listPrice.stringValue,
+                                        imageURL: url)
+        router.showProductDetailViewController(with: vm)
     }
 }

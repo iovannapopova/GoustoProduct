@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+struct ProductDetailViewModel: Equatable {
+    let title: String
+    let description: String
+    let price: String
+    let imageURL: URL?
+}

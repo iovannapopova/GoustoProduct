@@ -10,10 +10,12 @@ import Foundation
 
 private var url: URL {
     get {
+        let queryItems = [NSURLQueryItem(name: "image_sizes[]", value: "750")]
         var components = URLComponents()
         components.scheme = "https"
         components.host = "api.gousto.co.uk"
         components.path = "/products/v2.0/products"
+        components.queryItems = queryItems as [URLQueryItem]
         return components.url!
     }
 }

@@ -9,9 +9,14 @@
 import UIKit
 
 final class TableViewDelegate : NSObject, UITableViewDelegate {
+    private unowned let selectionController: TableSelection
+
+    init(selectionController: TableSelection) {
+        self.selectionController = selectionController
+    }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        selectionController.onRowSelected(at: indexPath)
     }
 
 }

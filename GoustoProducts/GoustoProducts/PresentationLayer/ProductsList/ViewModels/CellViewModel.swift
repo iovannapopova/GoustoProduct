@@ -7,8 +7,10 @@
 //
 
 import Foundation
+import UIKit
 
 struct CellViewModel: Equatable {
     let title: String
-    let detail: String
+    let price: String?
+    let imageURL: URL?
 }
