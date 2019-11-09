@@ -30,6 +30,9 @@ final class Controller: NSObject {
 
     fileprivate var searchText = ""
     fileprivate var searchResultProducts: [Product] {
+        if searchText == "" {
+            return products
+        }
         return products.filter { $0.title.range(of: searchText) != nil }
     }
 
