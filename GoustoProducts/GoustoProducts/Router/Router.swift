@@ -22,7 +22,7 @@ final class Router: Routing {
 
     init(controller: Controller) {
         tableViewDelegate = TableViewDelegate(selectionController: controller)
-        viewController = ViewController(delegate: tableViewDelegate, controller: controller)
+        viewController = ViewController(delegate: tableViewDelegate, controller: controller, searchController: controller)
         viewController.title = "Gousto"
         navigationController = UINavigationController(rootViewController: viewController)
         self.controller = controller

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol UI: class {
     var cellViewModels: [CellViewModel] { get set }
@@ -19,8 +20,7 @@ protocol TableSelection: class {
 protocol UIDelegate: class {
     func uiDidAppear()
 }
-
-final class Controller {
+final class Controller: NSObject {
     fileprivate unowned let store: DataStoreProtocol
     fileprivate var products: [Product] { return store.products }
 
@@ -28,12 +28,17 @@ final class Controller {
     weak var productsUI: UI!
     weak var router: Routing!
 
+    fileprivate var searchText = ""
+    fileprivate var searchResultProducts: [Product] {
+        return products.filter { $0.title.range(of: searchText) != nil }
+    }
+
     init(store: DataStoreProtocol) {
         self.store = store
     }
 
     fileprivate func updateProductsUI() {
-        productsUI.cellViewModels = products.map { product in
+        productsUI.cellViewModels = searchResultProducts.map { product in
             let images = product.images
             var url: URL?
             if let imageSources = images["750"] as? ImageSources {
@@ -72,5 +77,12 @@ extension Controller: TableSelection {
                                         price: "Price: ",// + product.listPrice.stringValue,
                                         imageURL: url)
         router.showProductDetailViewController(with: vm)
+    }
+}
+
+extension Controller: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        searchText = searchController.searchBar.text!
+        updateProductsUI()
     }
 }

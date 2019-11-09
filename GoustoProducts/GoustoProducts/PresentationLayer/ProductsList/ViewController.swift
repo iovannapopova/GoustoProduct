@@ -8,11 +8,11 @@
 
 import UIKit
 
-
 final class ViewController: UIViewController {
 
     let tableView: UITableView
     let tableViewDataSource: TableViewDataSource
+    let searchController: UISearchController
     unowned let controller: UIDelegate
 
     var cellViewModels: [CellViewModel] = [] {
@@ -22,12 +22,14 @@ final class ViewController: UIViewController {
         }
     }
 
-    init(delegate: TableViewDelegate, controller: UIDelegate) {
+    init(delegate: TableViewDelegate, controller: UIDelegate, searchController: UISearchResultsUpdating) {
         tableView = UITableView()
         tableView.register(TableViewCell.self, forCellReuseIdentifier: "CellID")
         tableViewDataSource = TableViewDataSource()
         tableView.delegate = delegate
         tableView.dataSource = tableViewDataSource
+        self.searchController = UISearchController(searchResultsController: nil)
+        self.searchController.searchResultsUpdater = searchController
         self.controller = controller
         super.init(nibName: nil, bundle: nil)
     }
@@ -43,6 +45,7 @@ final class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.tableHeaderView = searchController.searchBar
         view.addSubview(tableView)
     }
 
@@ -50,7 +53,6 @@ final class ViewController: UIViewController {
         super.viewWillLayoutSubviews()
         tableView.frame = view.bounds
     }
-
 }
 
 extension ViewController: UI { }
