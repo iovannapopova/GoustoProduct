@@ -28,9 +28,10 @@ final class Controller: NSObject {
     weak var productsUI: UI!
     weak var router: Routing!
 
+    fileprivate var searchTextIsEmpty = true
     fileprivate var searchText = ""
     fileprivate var searchResultProducts: [Product] {
-        if searchText == "" {
+        if searchTextIsEmpty {
             return products
         }
         return products.filter { $0.title.range(of: searchText) != nil }
@@ -41,6 +42,7 @@ final class Controller: NSObject {
     }
 
     fileprivate func updateProductsUI() {
+
         productsUI.cellViewModels = searchResultProducts.map { product in
             let images = product.images
             var url: URL?
@@ -85,7 +87,10 @@ extension Controller: TableSelection {
 
 extension Controller: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
-        searchText = searchController.searchBar.text!
-        updateProductsUI()
+        searchTextIsEmpty  = searchController.searchBar.text?.isEmpty ?? true
+        if searchText !=  searchController.searchBar.text! {
+            searchText = searchController.searchBar.text!
+            updateProductsUI()
+        } 
     }
 }
