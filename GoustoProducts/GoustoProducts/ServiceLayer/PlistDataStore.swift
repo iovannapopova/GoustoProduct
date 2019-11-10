@@ -28,14 +28,24 @@ final class PlistDataStore: DataStoreProtocol, DataStoreUpdating {
         observer.productsDidUpdate(products: products)
     }
 }
-private func serialize<A>(_ entities: [A], toFileAt url:URL) {
-    (entities as NSArray).write(to: url, atomically: true)
+private func serialize<A: Codable>(_ entities: [A], toFileAt url:URL) {
+
+    let encoder = PropertyListEncoder()
+    do {
+      let data = try encoder.encode(entities)
+      try data.write(to: url)
+    } catch {
+      // Handle error
+        
+    }
 }
 
-private func deserializeFromFile<A>(at url:URL) -> [A] {
-    return (NSArray(contentsOf: url) ?? []).compactMap {
-        $0 as? A
+private func deserializeFromFile<A: Codable>(at url:URL) -> [A] {
+    let decoder = PropertyListDecoder()
+    if let data = try? Data(contentsOf: url) {
+      return try! decoder.decode([A].self, from: data)
     }
+    return []
 }
 
 private let cachesDir = FileManager().urls(for: .cachesDirectory, in: .userDomainMask)[0]

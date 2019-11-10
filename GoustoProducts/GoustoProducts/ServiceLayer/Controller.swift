@@ -20,6 +20,7 @@ protocol TableSelection: class {
 protocol UIDelegate: class {
     func uiDidAppear()
 }
+
 final class Controller: NSObject {
     fileprivate unowned let store: DataStoreProtocol
     fileprivate var products: [Product] { return store.products }
@@ -42,7 +43,6 @@ final class Controller: NSObject {
     }
 
     fileprivate func updateProductsUI() {
-
         productsUI.cellViewModels = searchResultProducts.map { product in
             let images = product.images
             var url: URL?
@@ -78,8 +78,8 @@ extension Controller: TableSelection {
             url = URL(string: imageSources.url)!
         }
         let vm = ProductDetailViewModel(title: product.title,
-                                        description: product.title,
-                                        price: "Price: ",// + product.listPrice.stringValue,
+                                        description: product.description,
+                                        price: "Price: \(product.listPrice)",
                                         imageURL: url)
         router.showProductDetailViewController(with: vm)
     }

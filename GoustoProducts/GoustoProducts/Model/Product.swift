@@ -8,14 +8,6 @@
 
 import Foundation
 
-//"images": {
-//"750": {
-//"src": "https://production-media.gousto.co.uk/cms/product-image-landscape/BKD-mini-baking-kit_happy-bunny-cupcakes-0114-x750.jpg",
-//"url": "https://production-media.gousto.co.uk/cms/product-image-landscape/BKD-mini-baking-kit_happy-bunny-cupcakes-0114-x750.jpg",
-//"width": 750
-//}
-//}
-
 struct Products: Codable {
     let data: [Product]
 }
@@ -24,8 +16,8 @@ struct Product: Codable {
 //    let id: String
 //    let sku: String
     let title: String
-//    let description: String
-    let listPrice: String?
+    let description: String
+    let listPrice: String
     let images: [String: ImageSources?]
 //    let isVatable: Bool?
 //    let isForSale: Bool?
@@ -46,6 +38,7 @@ struct ImageSources: Codable {
 extension Product {
     private enum Keys: String, CodingKey {
         case title
+        case description
         case listPrice = "list_price"
         case images
     }
@@ -53,6 +46,7 @@ extension Product {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: Keys.self)
         title = try container.decode(String.self, forKey: .title)
+        description = try container.decode(String.self, forKey: .description)
         listPrice = try container.decode(String.self, forKey: .listPrice)
         images = try container.decode([String: ImageSources?].self, forKey: .images)
     }
@@ -60,6 +54,7 @@ extension Product {
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: Keys.self)
         try container.encode(title, forKey: .title)
+        try container.encode(description, forKey: .description)
         try container.encode(listPrice, forKey: .listPrice)
         try container.encode(images, forKey: .images)
     }
