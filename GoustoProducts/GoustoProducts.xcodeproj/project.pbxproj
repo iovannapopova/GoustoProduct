@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		576D4E12237AC38500CAC927 /* ControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576D4E11237AC38500CAC927 /* ControllerTests.swift */; };
+		576D4E16237B148500CAC927 /* ProductsDetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576D4E13237B126800CAC927 /* ProductsDetailViewControllerTests.swift */; };
 		579FF53C2374633B00E567CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579FF53B2374633B00E567CF /* AppDelegate.swift */; };
 		579FF5402374633B00E567CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579FF53F2374633B00E567CF /* ViewController.swift */; };
 		579FF5452374633D00E567CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 579FF5442374633D00E567CF /* Assets.xcassets */; };
@@ -40,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		576D4E11237AC38500CAC927 /* ControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerTests.swift; sourceTree = "<group>"; };
+		576D4E13237B126800CAC927 /* ProductsDetailViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsDetailViewControllerTests.swift; sourceTree = "<group>"; };
 		579FF5382374633B00E567CF /* GoustoProducts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoustoProducts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		579FF53B2374633B00E567CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		579FF53F2374633B00E567CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 			isa = PBXGroup;
 			children = (
 				579FF5522374633D00E567CF /* GoustoProductsTests.swift */,
+				576D4E11237AC38500CAC927 /* ControllerTests.swift */,
+				576D4E13237B126800CAC927 /* ProductsDetailViewControllerTests.swift */,
 				579FF5542374633D00E567CF /* Info.plist */,
 			);
 			path = GoustoProductsTests;
@@ -327,6 +333,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				579FF5532374633D00E567CF /* GoustoProductsTests.swift in Sources */,
+				576D4E16237B148500CAC927 /* ProductsDetailViewControllerTests.swift in Sources */,
+				576D4E12237AC38500CAC927 /* ControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -50,9 +50,17 @@ final class Controller: NSObject {
                 url = URL(string: imageSources.url)!
             }
             return CellViewModel(title: product.title,
-                          price: product.listPrice,
+                          price: "Price: \(product.listPrice)",
                           imageURL: url)
 
+        }
+    }
+
+    func updateSearchResults(for text: String?) {
+        searchTextIsEmpty  = text?.isEmpty ?? true
+        if searchText !=  text! {
+            searchText = text!
+            updateProductsUI()
         }
     }
 }
@@ -87,10 +95,6 @@ extension Controller: TableSelection {
 
 extension Controller: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
-        searchTextIsEmpty  = searchController.searchBar.text?.isEmpty ?? true
-        if searchText !=  searchController.searchBar.text! {
-            searchText = searchController.searchBar.text!
-            updateProductsUI()
-        } 
+        updateSearchResults(for: searchController.searchBar.text)
     }
 }

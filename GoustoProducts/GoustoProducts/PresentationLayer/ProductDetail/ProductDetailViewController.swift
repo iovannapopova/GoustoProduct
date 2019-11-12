@@ -78,7 +78,5 @@ class ProductDetailViewController: UIViewController {
             }
         }
         task.resume()
-
     }
-
 }
