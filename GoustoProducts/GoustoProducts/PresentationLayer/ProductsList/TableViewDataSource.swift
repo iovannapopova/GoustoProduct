@@ -20,6 +20,7 @@ class TableViewDataSource : NSObject, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CellID", for: indexPath) as! TableViewCell
         cell.viewModel = cellViewModels[indexPath.row]
+        cell.accessoryType = .disclosureIndicator
         return cell
     }
 

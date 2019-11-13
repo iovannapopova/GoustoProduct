@@ -29,10 +29,10 @@ final class ViewController: UIViewController {
         tableView.delegate = delegate
         tableView.dataSource = tableViewDataSource
         self.searchController = UISearchController(searchResultsController: nil)
-        self.searchController.searchBar.showsCancelButton = true
         self.searchController.searchResultsUpdater = searchController
         self.searchController.obscuresBackgroundDuringPresentation = false
         self.searchController.searchBar.placeholder = "Search Products"
+        self.searchController.searchBar.tintColor = templateColor
         self.controller = controller
         super.init(nibName: nil, bundle: nil)
     }

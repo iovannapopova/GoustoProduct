@@ -25,6 +25,8 @@ final class Router: Routing {
         viewController = ViewController(delegate: tableViewDelegate, controller: controller, searchController: controller)
         viewController.title = "Gousto"
         navigationController = UINavigationController(rootViewController: viewController)
+        navigationController.navigationBar.barTintColor = templateColor;
+        navigationController.navigationBar.tintColor = .white
         self.controller = controller
 
         controller.productsUI = viewController

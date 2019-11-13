@@ -16,8 +16,8 @@ final class NetworkClient {
         self.dataStore = dataStore
     }
     
-    func refresh() {
-            URLSession.shared.load(products) { products in
+    func refresh(with session: URLSession = URLSession.shared) {
+        URLSession.shared.load(products) { products in
             guard let products = products else {
                 return
             }

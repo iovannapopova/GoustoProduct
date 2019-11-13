@@ -22,7 +22,11 @@ extension HttpMethod {
     }
 }
 
-extension URLSession {
+protocol Session {
+    func load<A>(_ resource: Resource<A>, completion: @escaping (A?) -> ())
+}
+
+extension URLSession: Session {
     func load<A>(_ resource: Resource<A>, completion: @escaping (A?) -> ()) {
         dataTask(with: resource.urlRequest) { data, _, _ in
             completion(data.flatMap(resource.parse))
