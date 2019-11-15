@@ -39,6 +39,16 @@
                ReferencedContainer = "container:GoustoProducts.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "576CD6EE237C591900C12636"
+               BuildableName = "GoustoProductsUITests.xctest"
+               BlueprintName = "GoustoProductsUITests"
+               ReferencedContainer = "container:GoustoProducts.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

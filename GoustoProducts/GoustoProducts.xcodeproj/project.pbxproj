@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		576CD6FA237D4EB200C12636 /* ProductDetailsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576CD6F9237D4EB200C12636 /* ProductDetailsScreen.swift */; };
+		576CD6FD237D4F6700C12636 /* ProductsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576CD6FC237D4F6700C12636 /* ProductsScreen.swift */; };
+		576CD6FF237D6B1700C12636 /* AccessibilityIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576CD6FE237D6B1700C12636 /* AccessibilityIdentifiers.swift */; };
+		576CD700237D6B3A00C12636 /* AccessibilityIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576CD6FE237D6B1700C12636 /* AccessibilityIdentifiers.swift */; };
 		576D4E12237AC38500CAC927 /* ControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576D4E11237AC38500CAC927 /* ControllerTests.swift */; };
 		576D4E1A237B40A400CAC927 /* ProductsDetailVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576D4E19237B40A400CAC927 /* ProductsDetailVCTests.swift */; };
 		576D4E1C237B51AD00CAC927 /* NetworkClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576D4E1B237B51AD00CAC927 /* NetworkClientTests.swift */; };
@@ -35,6 +39,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		576CD6F4237C591900C12636 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 579FF5302374633A00E567CF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 579FF5372374633A00E567CF;
+			remoteInfo = GoustoProducts;
+		};
 		579FF54F2374633D00E567CF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 579FF5302374633A00E567CF /* Project object */;
@@ -45,6 +56,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		576CD6EF237C591900C12636 /* GoustoProductsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoustoProductsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		576CD6F3237C591900C12636 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		576CD6F9237D4EB200C12636 /* ProductDetailsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsScreen.swift; sourceTree = "<group>"; };
+		576CD6FC237D4F6700C12636 /* ProductsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsScreen.swift; sourceTree = "<group>"; };
+		576CD6FE237D6B1700C12636 /* AccessibilityIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityIdentifiers.swift; sourceTree = "<group>"; };
 		576D4E11237AC38500CAC927 /* ControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerTests.swift; sourceTree = "<group>"; };
 		576D4E19237B40A400CAC927 /* ProductsDetailVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsDetailVCTests.swift; sourceTree = "<group>"; };
 		576D4E1B237B51AD00CAC927 /* NetworkClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClientTests.swift; sourceTree = "<group>"; };
@@ -77,6 +93,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		576CD6EC237C591900C12636 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		579FF5352374633A00E567CF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -94,11 +117,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		576CD6F0237C591900C12636 /* GoustoProductsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				576CD6F3237C591900C12636 /* Info.plist */,
+				576CD6FB237D4EBA00C12636 /* Screens */,
+				576CD6FE237D6B1700C12636 /* AccessibilityIdentifiers.swift */,
+			);
+			path = GoustoProductsUITests;
+			sourceTree = "<group>";
+		};
+		576CD6FB237D4EBA00C12636 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				576CD6F9237D4EB200C12636 /* ProductDetailsScreen.swift */,
+				576CD6FC237D4F6700C12636 /* ProductsScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
 		579FF52F2374633A00E567CF = {
 			isa = PBXGroup;
 			children = (
 				579FF53A2374633B00E567CF /* GoustoProducts */,
 				579FF5512374633D00E567CF /* GoustoProductsTests */,
+				576CD6F0237C591900C12636 /* GoustoProductsUITests */,
 				579FF5392374633B00E567CF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -108,6 +151,7 @@
 			children = (
 				579FF5382374633B00E567CF /* GoustoProducts.app */,
 				579FF54E2374633D00E567CF /* GoustoProductsTests.xctest */,
+				576CD6EF237C591900C12636 /* GoustoProductsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -220,6 +264,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		576CD6EE237C591900C12636 /* GoustoProductsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 576CD6F8237C591900C12636 /* Build configuration list for PBXNativeTarget "GoustoProductsUITests" */;
+			buildPhases = (
+				576CD6EB237C591900C12636 /* Sources */,
+				576CD6EC237C591900C12636 /* Frameworks */,
+				576CD6ED237C591900C12636 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				576CD6F5237C591900C12636 /* PBXTargetDependency */,
+			);
+			name = GoustoProductsUITests;
+			productName = GoustoProductsUITests;
+			productReference = 576CD6EF237C591900C12636 /* GoustoProductsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		579FF5372374633A00E567CF /* GoustoProducts */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 579FF5572374633D00E567CF /* Build configuration list for PBXNativeTarget "GoustoProducts" */;
@@ -265,6 +327,10 @@
 				LastUpgradeCheck = 1110;
 				ORGANIZATIONNAME = "Iovanna Mishanina";
 				TargetAttributes = {
+					576CD6EE237C591900C12636 = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = 579FF5372374633A00E567CF;
+					};
 					579FF5372374633A00E567CF = {
 						CreatedOnToolsVersion = 11.1;
 					};
@@ -289,11 +355,19 @@
 			targets = (
 				579FF5372374633A00E567CF /* GoustoProducts */,
 				579FF54D2374633D00E567CF /* GoustoProductsTests */,
+				576CD6EE237C591900C12636 /* GoustoProductsUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		576CD6ED237C591900C12636 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		579FF5362374633A00E567CF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -313,6 +387,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		576CD6EB237C591900C12636 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				576CD6FD237D4F6700C12636 /* ProductsScreen.swift in Sources */,
+				576CD6FA237D4EB200C12636 /* ProductDetailsScreen.swift in Sources */,
+				576CD6FF237D6B1700C12636 /* AccessibilityIdentifiers.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		579FF5342374633A00E567CF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -326,6 +410,7 @@
 				579FF5632374641D00E567CF /* TableViewCell.swift in Sources */,
 				579FF57A23746DC100E567CF /* DataStore.swift in Sources */,
 				579FF5702374677000E567CF /* ProductResource.swift in Sources */,
+				576CD700237D6B3A00C12636 /* AccessibilityIdentifiers.swift in Sources */,
 				579FF58323755DE100E567CF /* Resource.swift in Sources */,
 				579FF56B237464A700E567CF /* ProductDetailViewController.swift in Sources */,
 				579FF58023746E1000E567CF /* Router.swift in Sources */,
@@ -353,6 +438,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		576CD6F5237C591900C12636 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 579FF5372374633A00E567CF /* GoustoProducts */;
+			targetProxy = 576CD6F4237C591900C12636 /* PBXContainerItemProxy */;
+		};
 		579FF5502374633D00E567CF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 579FF5372374633A00E567CF /* GoustoProducts */;
@@ -372,6 +462,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		576CD6F6237C591900C12636 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FATB7T58LC;
+				INFOPLIST_FILE = GoustoProductsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.iovanna.GoustoProductsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GoustoProducts;
+			};
+			name = Debug;
+		};
+		576CD6F7237C591900C12636 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FATB7T58LC;
+				INFOPLIST_FILE = GoustoProductsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.iovanna.GoustoProductsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GoustoProducts;
+			};
+			name = Release;
+		};
 		579FF5552374633D00E567CF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -569,6 +697,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		576CD6F8237C591900C12636 /* Build configuration list for PBXNativeTarget "GoustoProductsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				576CD6F6237C591900C12636 /* Debug */,
+				576CD6F7237C591900C12636 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		579FF5332374633A00E567CF /* Build configuration list for PBXProject "GoustoProducts" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

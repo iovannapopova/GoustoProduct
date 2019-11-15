@@ -33,6 +33,8 @@ final class ViewController: UIViewController {
         self.searchController.obscuresBackgroundDuringPresentation = false
         self.searchController.searchBar.placeholder = "Search Products"
         self.searchController.searchBar.tintColor = templateColor
+        self.searchController.isAccessibilityElement = true
+        self.searchController.searchBar.accessibilityIdentifier = AccessibilityIdentifier.searchBar
         self.controller = controller
         super.init(nibName: nil, bundle: nil)
     }
@@ -49,6 +51,7 @@ final class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.tableHeaderView = searchController.searchBar
+        tableView.tableHeaderView?.isAccessibilityElement = true
         view.addSubview(tableView)
     }
 

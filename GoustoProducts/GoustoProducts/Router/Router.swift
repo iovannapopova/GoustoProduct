@@ -27,6 +27,7 @@ final class Router: Routing {
         navigationController = UINavigationController(rootViewController: viewController)
         navigationController.navigationBar.barTintColor = templateColor;
         navigationController.navigationBar.tintColor = .white
+        navigationController.navigationBar.accessibilityIdentifier = AccessibilityIdentifier.navigationBar
         self.controller = controller
 
         controller.productsUI = viewController

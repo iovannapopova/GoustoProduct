@@ -24,6 +24,7 @@ class TableViewCell: UITableViewCell {
         super.init(style: .subtitle, reuseIdentifier: reuseIdentifier)
         self.textLabel?.textColor = templateColor
         self.textLabel?.numberOfLines = 0
+        self.textLabel?.accessibilityIdentifier = AccessibilityIdentifier.producrTitle
         self.imageView?.layer.cornerRadius = 5.0
     }
 
@@ -48,7 +49,7 @@ class TableViewCell: UITableViewCell {
                 guard response?.url == self.viewModel.imageURL else {
                     return
                 }
-                let image = UIImage(data: data, scale: UIScreen.main.scale)!
+                let image = UIImage(data: data)!
                 self.imageView?.image = image.resize(toTargetSize: CGSize(width: 88.0, height: 88.0))
                 self.setNeedsLayout()
 

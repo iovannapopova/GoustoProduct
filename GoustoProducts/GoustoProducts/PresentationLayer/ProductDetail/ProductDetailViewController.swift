@@ -31,6 +31,9 @@ class ProductDetailViewController: UIViewController {
         imageView.backgroundColor = .lightGray
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
+        descriptionLabel.accessibilityIdentifier = AccessibilityIdentifier.productDetailDescription
+        imageView.accessibilityIdentifier = AccessibilityIdentifier.productDetailImage
+        priceLabel.accessibilityIdentifier = AccessibilityIdentifier.productDetailImage
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
 
