@@ -87,13 +87,15 @@ class GoustoProducts: XCTestCase {
 }
 
 private let testProducts = [
-    Product(title: "Balsajo Black Garlic Cloves",
+    Product(id: "0009468c-33e9-11e7-b485-02859a19531d",
+            title: "Balsajo Black Garlic Cloves",
             description: "What happens if you leave a premium garlic bulb in an oven for a few weeks to slow cook? You get this wonderful stuff! With a sweet, strong and balsamicky taste, it’s a seriously exciting ingredient to try out in your cooking.",
             listPrice: "9.95",
             images: ["750" : ImageSources(src: "https://production-media.gousto.co.uk/cms/product-image-landscape/Balsajo-BlackGarlic_17876-x200.jpg",
                                           url: "https://production-media.gousto.co.uk/cms/product-image-landscape/Balsajo-BlackGarlic_17876-x200.jpg",
                                           width: 750)]),
-    Product(title: "Sancerre Blanc",
+    Product(id: "00a0130e-bfea-11e7-a2c2-0617e74d8914",
+            title: "Sancerre Blanc",
             description: "Intriguing notes of vanilla and chocolate make this fruity, full-bodied wine unique. With a long, pleasant finish and woody aroma supporting it, this characterful wine is a good match with beef dishes. ABV 14%.",
             listPrice: "7.95",
             images: ["750" : ImageSources(src: "https://production-media.gousto.co.uk/cms/product-image-landscape/Balsajo-BlackGarlic_17876-x200.jpg",

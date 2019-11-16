@@ -43,7 +43,11 @@ private func serialize<A: Codable>(_ entities: [A], toFileAt url:URL) {
 private func deserializeFromFile<A: Codable>(at url:URL) -> [A] {
     let decoder = PropertyListDecoder()
     if let data = try? Data(contentsOf: url) {
-      return try! decoder.decode([A].self, from: data)
+        do {
+            return try decoder.decode([A].self, from: data)
+        } catch {
+            return []
+        }
     }
     return []
 }

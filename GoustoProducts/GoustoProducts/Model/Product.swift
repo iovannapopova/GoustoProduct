@@ -13,12 +13,12 @@ struct Products: Codable {
 }
 
 struct Product: Codable {
-//    let id: String
-//    let sku: String
+    let id: String
     let title: String
     let description: String
     let listPrice: String
     let images: [String: ImageSources?]
+//TODO: Check which fileds to use
 //    let isVatable: Bool?
 //    let isForSale: Bool?
 //    let ageRestricted: Bool?
@@ -37,6 +37,7 @@ struct ImageSources: Codable {
 
 extension Product {
     private enum Keys: String, CodingKey {
+        case id
         case title
         case description
         case listPrice = "list_price"
@@ -45,6 +46,7 @@ extension Product {
 
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: Keys.self)
+        id = try container.decode(String.self, forKey: .id)
         title = try container.decode(String.self, forKey: .title)
         description = try container.decode(String.self, forKey: .description)
         listPrice = try container.decode(String.self, forKey: .listPrice)
@@ -53,6 +55,7 @@ extension Product {
 
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: Keys.self)
+        try container.encode(id, forKey: .id)
         try container.encode(title, forKey: .title)
         try container.encode(description, forKey: .description)
         try container.encode(listPrice, forKey: .listPrice)
