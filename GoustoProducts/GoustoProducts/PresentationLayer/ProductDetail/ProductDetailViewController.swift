@@ -69,10 +69,12 @@ class ProductDetailViewController: UIViewController {
         priceLabel.text = viewModel.price
         imageView.image = nil
         guard let imageURL = viewModel.imageURL else {
+            self.imageView.image = UIImage(named: "noimage")!
             return
         }
         let task = URLSession.shared.dataTask(with: imageURL) { (responseData, response, _) in
             guard let data = responseData else {
+                self.imageView.image = UIImage(named: "noimage")!
                 return
             }
             DispatchQueue.main.async {
