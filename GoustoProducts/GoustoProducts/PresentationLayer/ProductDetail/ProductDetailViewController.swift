@@ -33,7 +33,8 @@ class ProductDetailViewController: UIViewController {
         imageView.clipsToBounds = true
         descriptionLabel.accessibilityIdentifier = AccessibilityIdentifier.productDetailDescription
         imageView.accessibilityIdentifier = AccessibilityIdentifier.productDetailImage
-        priceLabel.accessibilityIdentifier = AccessibilityIdentifier.productDetailImage
+        priceLabel.accessibilityIdentifier = AccessibilityIdentifier.productDetailDescription
+        priceLabel.accessibilityIdentifier = AccessibilityIdentifier.productDetailPrice
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
 

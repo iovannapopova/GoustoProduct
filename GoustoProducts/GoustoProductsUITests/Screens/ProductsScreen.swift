@@ -34,15 +34,9 @@ class ProductsScreen: XCTestCase {
     func test_whenCellIsTapped_thenProductDetailsScreenIsShown() {
         let cell = ProductsScreen.cells.firstMatch
         cell.tap()
-        XCTAssert(ProductsScreen.app.otherElements[AccessibilityIdentifier.productDetailDescription].exists)
-        XCTAssert(ProductsScreen.app.otherElements[AccessibilityIdentifier.productDetailImage].exists)
-        XCTAssert(ProductsScreen.app.otherElements[AccessibilityIdentifier.productDetailPrice].exists)
-    }
 
-    func test_whenSearchResultButtonIstapped_thenCancelButtonIsShown() {
-        let searchBar = ProductsScreen.app.otherElements[AccessibilityIdentifier.searchBar]
-        searchBar.tap()
-
-        XCTAssert(ProductsScreen.app.staticTexts["Cancel"].exists)
+        XCTAssert(ProductsScreen.app.staticTexts[AccessibilityIdentifier.productDetailDescription].exists)
+        XCTAssert(ProductsScreen.app.images[AccessibilityIdentifier.productDetailImage].exists)
+        XCTAssert(ProductsScreen.app.staticTexts[AccessibilityIdentifier.productDetailPrice].exists)
     }
 }
