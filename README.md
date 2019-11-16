@@ -27,3 +27,4 @@ I used plists since Core Data (or sqlite for that matter) is a little bit overhe
 - the setup is more complicated
 - we're rewriting the whole store each time anyway, so we wouldn't gain much from using relational database or object persistence framework, otherwise we'll have to match remote objects with existing ones
 
+
